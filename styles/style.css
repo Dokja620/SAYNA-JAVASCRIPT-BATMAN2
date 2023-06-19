@@ -511,6 +511,19 @@ footer .credit img:hover {
   filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
 }
 
+.hidden {
+  opacity: 0;
+  transform: translateX(-15%);
+  filter: blur(2px);
+  transition: 1s all ease-in-out;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 /*END!*/
 
 /*# sourceMappingURL=style.css.map */

@@ -506,4 +506,16 @@ footer{
         }
     }
 }
+//scroll animation
+.hidden{
+    opacity: 0;
+    transform: translateX(-15%);
+    filter: blur(2px);
+    transition: 1s all ease-in-out;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
 /*END!*/

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="./images/icons/logo_bat_flèche_2.png" type="image/x-icon">
+    <script defer src="./scripts/app.js"></script>
     <meta name="description" content="PROJET FIL ROUGE - que je re-utiliserais plus tard pour la deuxième particulièrement... Proud of myself!! It's all thanks to you SAYNA :D">
     <meta name="author" content="Axel Diary RAKOTOARIVAO">
     <title>PROJET BATMAN</title>
@@ -36,7 +37,7 @@
     <main>
         <section id="intro"> <!-- Première section, intro car c'est la partie ou on l'intro... it's obsious tho -->
             <div class="parent">
-                <div class="intro-text">
+                <div class="intro-text hidden">
                     <p>Au nom de ses parents assassinés, Bruce Wayne mène une guerre éternelle 
                     contre les criminels de Gotham City. <br> Il est vengeur. Il est la nuit.
                     <br><span style="font-weight: bold; font-size: 1.2em;">Il est Batman.</span></p>
@@ -63,7 +64,7 @@
         </div>
         
         <section id="home"> <!-- Deuxième section, Home? Why? Whatever ;D l'univers cinematographique de BATMAN -->
-            <div class="titles-stuff">
+            <div class="titles-stuff hidden">
                 <h1>BATMAN AU CINÉMA</h1>
                 <p>Le personnage de Batman est un super héros de l’univers de DC Comics. Il a été créé par le
                     dessinateur Bob Kane et le scénariste Bill Finger et apparaît pour la première fois dans le
@@ -90,7 +91,7 @@
         </section>
 
         <section id="enemy"> <!-- Troisième section, juste presentation de quelques antagonistes -->
-            <div class="foe titles-stuff">
+            <div class="foe titles-stuff hidden">
                 <div class="bata">
                     <h1>NÉMÉSIS</h1>
                     <div class="batarang"><!-- ça m'a pris des semaines pour trouver la bonne methodes... GG aux designers... bof... j'ai su être créatif donc c'est ok -->
@@ -128,7 +129,7 @@
         </div>
         
         <section id="ally"> <!-- Quatrième section, Presentation de ses principaux alliès, avec illustration comme avec #enemy -->
-            <div class="titles-stuff">
+            <div class="titles-stuff hidden">
                 <h1>ALLIES</h1>
                 <p>Alfred est le majordome des Wayne. A leur mort il s’occupe de l’éducation du jeune Bruce
                     avant de l’assister dans son rôle du Batman. Ce dernier rencontrera Catwoman dès le
@@ -155,7 +156,7 @@
         </section>
 
         <section id="justiceleague"> <!-- Cinquième section, Justice League probablement la plus facile à faire -->
-            <div class="titles-stuff jlt">
+            <div class="titles-stuff jlt hidden">
                 <h1>JUSTICE LEAGUE</h1>
                 <p>Lorsque la Terre est menacée les plus grands super-héros s’allient pour la protéger. Ils
                     doivent cependant apprendre à se faire confiance mutuellement et à faire équipe ce qui ne
@@ -170,10 +171,10 @@
         </section>
 
         <section id="trailer"> <!-- Sixième section, partie où on presente un peu le film "THE BATMAN" -->
-            <div class="trailer titles-stuff"><h1>MULTIMEDIA</h1></div>
+            <div class="trailer titles-stuff hidden"><h1>MULTIMEDIA</h1></div>
             <div class="media">
-                <div class="arrow"><img src="./images/Logos/icon_flèche_1.png" alt=""></div>
-                <div class="synopsis">
+                <div class="arrow hidden"><img src="./images/Logos/icon_flèche_1.png" alt=""></div>
+                <div class="synopsis hidden">
                     <img src="./images/Illustrations/Bathome_ba1.png" alt="">
                     <div class="texts">
                         <div class="imdb">
@@ -190,7 +191,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="arrow"><img src="./images/Logos/icon_flèche_2.png" alt=""></div>
+                <div class="arrow hidden"><img src="./images/Logos/icon_flèche_2.png" alt=""></div>
             </div>
         </section>
 
@@ -201,7 +202,7 @@
         
         <section id="contact"> <!-- Septième section, la partie formulaire -->
             <form>
-                <div class="formulaire">
+                <div class="formulaire hidden">
                     <span style="text-align: center;"><h1>PRENONS CONTACT</h1></span>
                     <div class="one">
                         <h2>ADRESSE EMAIL</h2>
@@ -239,7 +240,7 @@
             </form>
         </section>
 
-        <section id="quotes"> <!-- Huitième section, sermon or whatever this is... citation -->
+        <section id="quotes" class="hidden"> <!-- Huitième section, sermon or whatever this is... citation -->
             <div class="leftg">
                 <img src="./images/Logos/icon_guillemets_1.png" alt="">
             </div>
@@ -267,7 +268,7 @@
 <!-- Footer, les copyrigth etc... Pas trop compliquer.
     du gateaux
 -->
-    <footer>
+    <footer class="hidden">
         <div class="copyright">
             <p class="copyright">
                 <img src="./images/Logos/icon_WB.png" alt="">
