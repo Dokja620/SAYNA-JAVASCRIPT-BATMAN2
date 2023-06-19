@@ -1,15 +1,13 @@
-# SAYNA-HTMLCSS-BATMAN1
-Projet Fil Rouge - BATMAN 1 - version FINAL
-Salut!! 😁, Je sais qu'il est un peut tard pour une mise à jour😅
-mais bon, mieux vaut tard que jamais... j'avais déjà deposer le projet mais
-j'y suis revenus pour "m'entrainer"😇
+# SAYNA-JAVASCRIPT-BATMAN2
+Projet Fil Rouge - BATMAN 2 - version FINAL
+Salut!! 😁, Je vous présente mon projet... Perfected version😂 muhahahaha😉
 
-- J'ai utiliser SASS sur celui-ci
-- Et j'ai aussi tester git
-- Comparer au version 1 celui ci est exactement ce que l'énnoncer a demander
-- et celui ci est 'plus' responsive que l'ancien
-(mieux travailler😊)
-- et enfin si j'additionne mon temps je pense que ça m'a pris plus d'une journée
+- J'ai utiliser la version FINAL de mon premier projet comme base
+- Et j'utilise git
+- Site totalement responsive...
+- Bon, à vue d'oeil ça va prendre une semaine👀
+
+N.B: Now I can say that I doubt if there is anyone else who did better🤷‍♂️👀 Qui sait, je suis impatient de voir les resultat.
 
 !!! Proud of myself🔥🔥😎
 
