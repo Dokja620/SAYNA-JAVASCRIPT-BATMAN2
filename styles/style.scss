@@ -506,6 +506,7 @@ footer{
         }
     }
 }
+
 //scroll animation
 .hidden{
     opacity: 0;
@@ -517,5 +518,16 @@ footer{
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+.zoom{
+    opacity: 0;
+    transform: scale(0);
+    filter: blur(5px);
+    transition: all .7s ease-in-out;
+}
+.zoom-in{
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
 }
 /*END!*/
