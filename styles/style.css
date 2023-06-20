@@ -1,27 +1,9 @@
 @charset "UTF-8";
-/*reseting default annoying settings*/
-* {
-  text-decoration: none;
-  list-style: none;
-  color: white;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-weight: normal;
-  scroll-behavior: smooth;
-  animation: fade-in 0.5s ease-in;
-}
-
-/*partie animation, fade in*/
-@keyframes fade-in {
-  from {
-    transform: translateX(-10%);
-    opacity: 0.2;
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
+@import url(../styles/libs/default.css);
+@import url(../styles/libs/nav-scroll.css);
+@import url(../styles/libs/cadre.css);
+@import url(../styles/libs/button.css);
+@import url(../styles/libs/footer-animation.css);
 /*font importation, je mets tout ici, c'est plus simple et efficace ainsi*/
 @font-face {
   font-family: "Titre";
@@ -77,93 +59,11 @@ body {
     font-size: 0.9em;
   }
 }
-/*I had to use this instead of border 'cause it's easier to make it responsive this way*/
-.lines {
-  border: 2px solid rgba(102, 99, 99, 0.233);
-  width: 90%;
-  top: 80px;
-  left: 5%;
-  position: absolute;
-}
-
-.lines-ver {
-  position: fixed;
-  top: 0;
-  left: 5%;
-  width: 3px;
-  height: 100vh;
-  background: rgba(102, 99, 99, 0.233);
-}
-
-.lines-ver-2 {
-  position: fixed;
-  top: 0;
-  right: 5%;
-  width: 3px;
-  height: 100vh;
-  background: rgba(102, 99, 99, 0.233);
-}
-
 /*forgot what the purpose of this... It's important so let's just let it be*/
 main {
   z-index: 2;
 }
 
-/*barre de navigation... Home logo and other page links*/
-nav {
-  position: relative;
-  padding-top: 20px;
-}
-nav .nav-logo {
-  position: absolute;
-  left: 8%;
-}
-nav .nav-logo img {
-  cursor: pointer;
-  transition: filter 0.4s ease-in-out;
-}
-nav .nav-logo img:hover {
-  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
-}
-nav .nav-links {
-  position: absolute;
-  right: 6%;
-}
-nav .nav-links ul li {
-  display: inline-block;
-  padding: 0 15px;
-}
-nav .nav-links ul li a {
-  margin: auto;
-  position: relative;
-}
-nav .nav-links ul li a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: yellow;
-  transform-origin: bottom center;
-  transition: all 0.5s ease-in-out;
-}
-nav .nav-links ul li a:hover {
-  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
-  font-weight: 600;
-}
-nav .nav-links ul li a:hover::after {
-  transform: scaleX(1);
-}
-
-/*just a little adjustement for small screen devices*/
-@media screen and (max-width: 500px) {
-  .nav-logo img {
-    padding-top: 9px;
-    width: 75%;
-  }
-}
 /*the little arrow that is there for... I don't really know why...*/
 .flèche {
   text-align: center;
@@ -194,82 +94,6 @@ nav .nav-links ul li a:hover::after {
   #intro .parent {
     padding-top: 350px;
     margin-left: 12%;
-  }
-}
-/*The scroll bar*/
-.scroll {
-  position: fixed;
-  z-index: 1;
-  top: 35%;
-  right: 1.2%;
-  align-items: center;
-  transition: 0.5s all ease-in-out;
-}
-.scroll .mediasoc div {
-  padding: 5px 0;
-}
-.scroll img {
-  cursor: pointer;
-  transition: filter 0.4s ease-in-out;
-}
-.scroll img:hover {
-  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
-}
-
-/*responsive part for the scroll*/
-/*first I'll just resize it*/
-@media screen and (min-width: 850px) and (max-width: 1200px) {
-  .scroll {
-    right: 1.1%;
-  }
-  .scroll .up a img {
-    width: 70px;
-  }
-}
-/*and then I rotated the arrow like bat stuff... 'cause there no much space*/
-@media screen and (max-width: 850px) {
-  .scroll {
-    right: -2%;
-  }
-  .scroll .up {
-    transform: rotate(-90deg);
-    margin: 25% 0;
-  }
-  .scroll .up a img {
-    width: 80px;
-  }
-  .scroll .down {
-    transform: rotate(90deg);
-  }
-}
-/*All buttons have their propreties here... Easier and fastest way to make it*/
-button {
-  background: linear-gradient(to right, #EDDEBF, #890008);
-  border: none;
-  padding: 1% 2%;
-  margin: 10px 2%;
-  opacity: 0.4;
-  transition: 0.4s all ease-in-out;
-  cursor: pointer;
-}
-button:hover {
-  opacity: 1;
-}
-
-.button {
-  text-align: center;
-}
-
-.btn2 {
-  background: none;
-  border: 2px solid;
-  border-image: linear-gradient(to right, #EDDEBF, #19587D) 1;
-}
-
-/*Responsive... Button...Adjusting the size*/
-@media screen and (max-width: 850px) {
-  button {
-    padding: 2% 3%;
   }
 }
 /*Three section share those propreties... They look alike so I gave 'em the same classes*/
@@ -473,68 +297,6 @@ form select > option {
   height: 10px;
   border-radius: 15px;
   border: 1px solid #429ef5;
-}
-
-/*Finaly the footer, It's all I guess*/
-footer {
-  margin-top: 20vh;
-}
-footer .copyright {
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  margin: 0 10%;
-}
-footer .copyright img {
-  width: 35px;
-  height: 25px;
-  cursor: pointer;
-  transition: filter 0.25s ease-in-out;
-}
-footer .copyright img:hover {
-  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
-}
-footer .credit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10%;
-  gap: 2%;
-}
-footer .credit img {
-  padding: 0 5px;
-  cursor: pointer;
-  transition: filter 0.25s ease-in-out;
-}
-footer .credit img:hover {
-  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
-}
-
-.hidden {
-  opacity: 0;
-  transform: translateX(-15%);
-  filter: blur(2px);
-  transition: 1s all ease-in-out;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-}
-
-.zoom {
-  opacity: 0;
-  transform: scale(0);
-  filter: blur(5px);
-  transition: all 0.7s ease-in-out;
-}
-
-.zoom-in {
-  opacity: 1;
-  transform: scale(1);
-  filter: blur(0);
 }
 
 /*END!*/
