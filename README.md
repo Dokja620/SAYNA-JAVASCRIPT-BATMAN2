@@ -1,15 +1,14 @@
 # SAYNA-JAVASCRIPT-BATMAN2
-Projet Fil Rouge - BATMAN 2 - version FINAL
-Salut!! 😁, Je vous présente mon projet... Perfected version😂 muhahahaha😉
+Projet Fil Rouge - BATMAN2
 
-- J'ai utiliser la version FINAL de mon premier projet comme base
-- Et j'utilise git
-- Site totalement responsive...
-- Bon, à vue d'oeil ça va prendre une semaine👀
+Salut!! 😁 Upload de mon projet
 
-N.B: Now I can say that I doubt if there is anyone else who did better🤷‍♂️👀 Qui sait, je suis impatient de voir les resultat.
+- J'ai utiliser SASS
+- Et git aussi
+- de base utiliser BATMAN1, mais avec quelques modifications
+- et celui ci est responsive
 
-!!! Proud of myself🔥🔥😎
+!!! Go🔥Go🔥😎
 
     Si vous lisez ceci; pour que tout soit plus claire... 
     lisez mon SCSS au lieu du CSS
