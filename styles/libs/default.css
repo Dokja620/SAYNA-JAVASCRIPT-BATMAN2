@@ -1,0 +1,23 @@
+/*reseting default annoying settings*/
+*{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    scroll-behavior: smooth;
+    animation: fade-in .5s ease-in;
+}
+
+/*partie animation, fade in*/
+@keyframes fade-in {
+    from{
+        transform: translateX(-10%);
+        opacity: .2;
+    }
+    to{
+        transform: translateX(0%);
+    }
+}

@@ -1,0 +1,304 @@
+//importing external style... both pages use the same so why bother to copy and cut if I can just...
+@import url(../styles/libs/default.css);
+@import url(../styles/libs/nav-scroll.css);
+@import url(../styles/libs/cadre.css);
+@import url(../styles/libs/button.css);
+@import url(../styles/libs/footer-animation.css);
+
+/*font importation, je mets tout ici, c'est plus simple et efficace ainsi*/
+@font-face {
+    font-family: 'Titre';
+    src: url('../fonts/Rajdhani-Medium.ttf');
+}
+@font-face {
+    font-family: 'Titre H2';
+    src: url('../fonts/SpaceGrotesk-Bold.ttf');
+}
+@font-face {
+    font-family: 'Texte';
+    src: url('../fonts/SpaceGrotesk-Regular.ttf');
+}
+h1, ul li{
+    font-family: 'Titre';
+    font-size: 2.25em;
+}
+button, h2{
+    font-family: 'Titre';
+    font-size: 1.25em;
+}
+h6,h3{
+    font-family: 'Titre H2';
+    font-size: .9em;
+}
+p, label{
+    font-family: 'Texte'; 
+    font-size: 1.125em;
+}
+label{
+    color: grey;
+}
+
+/*Background... First thing that the user will see...*/
+body{
+    background: black url('../images/Illustrations/Bathome1.png') 80% 20%/cover no-repeat;
+    height: 901px;
+    font-size: 16px;
+}
+    /*Responsive*/
+    @media screen and (max-width: 900px) {
+        body{
+            font-size: 14px;
+        }
+    }
+    @media screen and (min-width: 950px) and (max-width: 990px) {
+        .synopsis{
+            font-size: .9em;
+        }
+    }
+
+/*forgot what the purpose of this... It's important so let's just let it be*/
+main{
+    z-index: 2;
+}
+
+/*the little arrow that is there for... I don't really know why...*/
+.flèche{
+    text-align: center;
+    margin-bottom: 15%;
+    img{
+        width: 50px;
+        cursor: pointer;
+        transition: filter .4s ease-in-out;
+        &:hover{
+            filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+        }
+    }
+}
+
+/*First section*/
+#intro{
+    height: 901px;
+    .parent{
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 375PX;
+        text-align: center;
+        width: 50%;
+    }
+}
+@media screen and (max-width: 470px) {
+    #intro{
+        .parent{
+            padding-top: 350px;
+            margin-left: 12%;
+        }
+    }
+}
+
+/*Three section share those propreties... They look alike so I gave 'em the same classes*/
+.titles-stuff{
+    margin: 0 12%;
+    padding-top: 10%;
+    text-align: justify;
+}
+.thebats{
+    margin: 35px 12%;
+    gap: 5%;
+    display: flex;
+    text-align: center;
+    h6{
+        padding-top: 10px;
+    }
+    img{
+        width: 90%;
+        transition: .5s transform ease-in-out;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+    /*Responsive*/
+    @media screen and (max-width: 850px) {
+        .titles-stuff{
+            margin: 0 16% 0 12%;
+        }
+        .thebats{
+            margin: 35px 16% 35px 12%;
+        }
+    }
+
+/*Hors section 1 the batman who just do? I don't even know what he's doing there*/
+.vigilent{
+    position: relative;
+    height: 30vh;
+    .random{
+        position: absolute;
+        right: 0;
+        img{
+            height: 40vh;
+        }
+    }
+}
+/*Hors section 2 The batarang... I struggle for this one... It was hard but... Now that I did it... I'm thankfull*/
+.bata{
+    position: relative;
+    .batarang{
+        position: absolute;
+        top: -60px;
+        left: 65px;
+        img{
+            width: 100px;
+        }
+    }
+}
+    /*Responsive hors section*/
+    @media screen and (max-width: 850px) {
+        .vigilent{
+            .random{
+                img{
+                    height: 30vh;
+                }
+            }
+        }
+    }
+
+/*Justice league part*/
+#justiceleague{
+    .jlt{
+        margin: 0 15% 10% 15%;
+    }
+    .jl{
+        margin: 0;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+/*Movie trailer part*/
+.media{
+    display: flex;
+    align-items: center;
+    margin: 10% auto;
+    width: 80%;
+    .synopsis{
+        height: 230px;
+        display: flex;
+        background: linear-gradient(to bottom right, #4e4940, #091e2a);
+        border-radius: 0 20px 20px 0;
+        .texts{
+            padding: 10px 15px;
+        }
+    }
+    .arrow{
+        margin: 0 30px;
+    }
+}
+    /*Responsive partie trailer*/
+    @media screen and (max-width: 1200px) {
+        .media{
+            width: 100%;
+            .synopsis{
+                height: max-content;
+            }
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .media{
+            width: 90%;
+            .synopsis{
+                border-radius: 0 20px 20px 20px;
+                height: 100%;
+                img{
+                    display: none;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 550px) {
+        .media{
+            width: 75%;
+            .synopsis{
+                margin-top: 200px;
+                height: 100%;
+                position: relative;
+                img{
+                    display: block;
+                    position: absolute;
+                    top: -240px;
+                }
+            }
+            .arrow{
+                display: none;
+            }
+        }
+        
+    }
+
+/*Hors section, partie vidéo... */
+.video{
+    text-align: center;
+    img{
+        width: 80%;
+        transition: all .25s ease-in-out;
+        &:hover{
+            filter: drop-shadow(0 0 10px white);
+        }
+    }
+}
+
+/*Last part the form*/
+form{
+    background: linear-gradient(to bottom right, #4e4940, #091e2a);
+    padding: 5% 12%;
+    margin: 15% 0;
+    line-height: 30px;
+    input, select{
+        font-family: 'Texte';
+        background: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        &:focus{
+            outline: none;
+        }
+    }
+    select>option{
+        background-color: #091e2a35;
+    }
+}
+.one, .two, .three, .four{
+    margin: 15px 0;
+}
+
+/*the real last part... Last but not a least... Quotes*/
+#quotes{
+    margin: 25% 10%;
+    img{
+        width: 10vh;
+    }
+    .leftg{
+        text-align: left;
+    }
+    .quotes{
+        text-align: center;
+        margin: 5% 0;
+    }
+    .rightd{
+        text-align: right;
+    }
+    .point{
+        display: flex;
+        justify-content: center;
+        .dot{
+            margin: 5px 2px;
+            width: 10px;
+            height: 10px;
+            border-radius: 15px;
+            border: 1px solid #429ef5;;
+        }
+    }
+}
+/*END!*/

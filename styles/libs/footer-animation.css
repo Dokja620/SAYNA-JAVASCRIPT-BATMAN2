@@ -1,0 +1,61 @@
+/*Finaly the footer, It's all I guess*/
+footer {
+    margin-top: 20vh;
+  }
+  footer .copyright {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 0 10%;
+  }
+  footer .copyright img {
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    transition: filter 0.25s ease-in-out;
+  }
+  footer .copyright img:hover {
+    filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+  }
+  footer .credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+    gap: 2%;
+  }
+  footer .credit img {
+    padding: 0 5px;
+    cursor: pointer;
+    transition: filter 0.25s ease-in-out;
+  }
+  footer .credit img:hover {
+    filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+  }
+  
+  .hidden {
+    opacity: 0;
+    transform: translateX(-15%);
+    filter: blur(2px);
+    transition: 1s all ease-in-out;
+  }
+  
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+  
+  .zoom {
+    opacity: 0;
+    transform: scale(0);
+    filter: blur(5px);
+    transition: all 0.7s ease-in-out;
+  }
+  
+  .zoom-in {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/game.css">
+    <link rel="shortcut icon" href="./images/icons/logo_bat_flèche_2.png" type="image/x-icon">
+    <script defer src="./scripts/scroll.js"></script>
+    <meta name="description" content="PROJET FIL ROUGE 2 - application des lecons de JavaScripts">
+    <meta name="author" content="Axel Diary RAKOTOARIVAO">
+    <title>BATGAME</title>
+</head>
+<body>
+<!-- line complement random... ahhhh... ces designer -->
+    <div class="lines"></div>
+    <div class="lines-ver"></div>
+    <div class="lines-ver-2"></div>
+
+    <!-- partie header qui contiendra la barre de navigation -->
+    <header>
+        <nav id="nav">
+            <div class="nav-logo"><img src="./images/Logos/logohome.png" alt="Homo logo BATMAN"></div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="./index.html" class="links-home">HOME</a></li>
+                    <li><a href="#" class="links-home">GAME</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="play" class="page">
+            <div class="hidden">
+                <h1>LET’S PLAY A LITTLE GAME...</h1>
+            </div>
+        </section>
+        <section id="game" class="page">
+            <!-- Start Quiz Button -->
+            <div class="start_btn">
+                <div class="start-title hidden"><h2>CONNAISSER VOUS BIEN LE CHEVALIER NOIR ?</h2></div>
+                <div class="bg hidden"><img src="./images/Illustrations/batgame/Batgame_2.png" alt=""></div>
+                <button class="hidden">Commencer le Quiz</button>
+            </div>
+
+            <!-- Rules box -->
+            <div class="info_box">
+                <div class="info_title">
+                    <span>Quelque règle de ce quiz</span>
+                </div>
+                <div class="info_list">
+                    <div class="info">1. <span>15 secondes</span> c'est le temps dont vous disposerez pour répondre à chaque question.</div>
+                    <div class="info">2. Une fois choisis, vous ne pourrez plus changer de réponse.</div>
+                    <div class="info">3. Vous ne pouvez plus choisir une fois le temps écouler.</div>
+                    <div class="info">4. Vous ne pourrez pas quittez le tant que le quiz est en cours.</div>
+                    <div class="info">5. Vous aurrez des points en fonction des bonnes réponses.</div>
+                </div>
+                <div class="buttons">
+                    <button class="quiz">Quitter</button>
+                    <button class="restart">Continuer</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- scroll bar -->
+    <!-- <div class="scroll">
+        <div class="up"><a href="#nav"><img src="./images/Logos/logo_bat_flèche.png" alt="down"></a></div>
+            <div class="mediasoc">
+                <div><img src="./images/Logos/icon_facebook.png" alt=""></div>
+                <div><img src="./images/Logos/icon_ig.png" alt=""></div>
+                <div><img src="./images/Logos/icon_tw.png" alt=""></div>
+            </div>
+        <div class="up down"><a href="#contact"><img src="./images/Logos/logo_bat_flèche_2.png" alt="up"></a></div>
+    </div> -->
+
+    <!-- Footer, les copyrigth etc... Pas trop compliquer.
+        du gateaux
+    -->
+    <footer class="hidden">
+        <div class="copyright">
+            <p class="copyright">
+                <img src="./images/Logos/icon_WB.png" alt="">
+                Ce projet respecte l’univers cinématographique des films Batman récents. Version Nolan & Snyder & Reeves.
+            </p>
+        </div>
+        <div class="credit hidden">
+            <div class="biglogo">
+                <img src="./images/Logos/logo_sayna_white.png" alt="">
+            </div>
+            <div class="smallicons">
+                <img src="./images/Logos/icon_x.png" alt="">
+            </div>
+            <div class="biglogo">
+                <img src="./images/Logos/icon_DC.png" alt="">
+            </div>
+            <div class="smallicons">
+                <img src="./images/Logos/icon_facebook.png" alt="">
+            </div>
+            <div class="smallicons">
+                <img src="./images/Logos/icon_ig.png" alt="">
+            </div>
+            <div class="smallicons">
+                <img src="./images/Logos/icon_tw.png" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
