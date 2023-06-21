@@ -1,0 +1,109 @@
+//importing external style... both pages use the same so why bother to copy and cut if I can just...
+@import url(../styles/libs/default.css);
+@import url(../styles/libs/nav-scroll.css);
+@import url(../styles/libs/cadre.css);
+@import url(../styles/libs/button.css);
+@import url(../styles/libs/footer-animation.css);
+
+/*font importation, je mets tout ici, c'est plus simple et efficace ainsi*/
+@font-face {
+    font-family: 'Titre';
+    src: url('../fonts/Rajdhani-Medium.ttf');
+}
+@font-face {
+    font-family: 'Titre B1';
+    src: url('../fonts/Rajdhani-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'Titre B2';
+    src: url('../fonts/Rajdhani-Bold.ttf');
+}
+@font-face {
+    font-family: 'Titre H2';
+    src: url('../fonts/SpaceGrotesk-Bold.ttf');
+}
+@font-face {
+    font-family: 'Texte';
+    src: url('../fonts/SpaceGrotesk-Regular.ttf');
+}
+h1, ul li{
+    font-family: 'Titre';
+    font-size: 2.25em;
+}
+button{
+    font-family: 'Titre';
+    font-size: 1.25em;
+}
+h2{
+    font-family: 'Titre';
+    font-size: 1.5em;
+}
+h6,h3{
+    font-family: 'Titre H2';
+    font-size: .9em;
+}
+p, label{
+    font-family: 'Texte'; 
+    font-size: 1.125em;
+}
+label{
+    color: grey;
+}
+
+/*background first*/
+body{
+    background: black url(../images/Illustrations/batgame/Batgame_1.png) 70% 20%/cover no-repeat;
+    height: 901px;
+    font-size: 16px;
+}
+    /*Responsive*/
+    @media screen and (max-width: 900px) {
+        body{
+            font-size: 14px;
+        }
+    }
+    @media screen and (min-width: 950px) and (max-width: 990px) {
+        .synopsis{
+            font-size: .9em;
+        }
+    }
+
+/**/
+.page{
+    height: 100vh;
+}
+
+/*première section*/
+#play{
+    margin: 300PX 10% 0;
+    width: 300px;
+    h1{
+        font-family: 'Titre B2';
+        font-weight: 700;
+        font-size: 2.7em;
+        letter-spacing: 2px;
+        line-height: 65px;
+    }
+}
+
+/*quiz first bg*/
+#game{
+    justify-content: center;
+}
+.start_btn{
+    display: grid;
+    align-content: center;
+    button{
+        margin: 4% 20% 0;
+    }
+}
+.start-title{
+    margin: 0 15%;
+    text-align: center;
+}
+.bg{
+    margin: 10px 20% 0;
+    img{
+        width: 100%;
+    }
+}
