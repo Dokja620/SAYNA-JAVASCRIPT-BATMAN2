@@ -1,6 +1,8 @@
 # SAYNA-JAVASCRIPT-BATMAN2
 Projet Fil Rouge - BATMAN2
 
+Hosted on gitPage: https://dokja620.github.io/SAYNA-JAVASCRIPT-BATMAN2/
+
 Salut!! 😁 Upload de mon projet
 
 - J'ai utiliser SASS
