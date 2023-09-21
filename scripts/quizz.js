@@ -59,33 +59,47 @@ let score = 0;
         options[index].classList.add("selected");
         nextButton.style.display = "block";
     }
-    //The correct/wrong answer popup
+    // Function to show the popup and automatically hide it after 2 seconds
     function showPopup(message) {
         popupMessage.textContent = message;
         popup.style.display = "flex";
+
+        // Automatically hide the popup after 2 seconds (2000 milliseconds)
+        setTimeout(closePopup, 1000);
     }
+
+    // Function to close the popup
     function closePopup() {
         popup.style.display = "none";
         loadNextQuestion();
     }
 
+    // Function to check the selected answer and show the custom popup modal with different text colors
     function checkAnswerAndShowPopup() {
         if (selectedAnswerIndex !== -1) {
-            const isGood = questions[currentQuestionIndex - 1].response[selectedAnswerIndex].isGood;
-            if (isGood) {
-                showPopup("Correct Answer!");
-                score++;
-            } else {
-                showPopup("Wrong Answer!");
-            }
+        const isGood = questions[currentQuestionIndex - 1].response[selectedAnswerIndex].isGood;
+        const message = isGood ? "Vrai  !" : "Faux  !";
+        
+        // Set the text color based on the result
+        const textColor = isGood ? "green" : "red";
+        popupMessage.textContent = message;
+        popupMessage.style.color = textColor;
+        popupMessage.style.fontFamily = "Titre B2";
+
+        showPopup(message);
+        
+        if (isGood) {
+            score++;
+        }
         } else {
             showPopup("Please select an answer before moving to the next question.");
         }
     }
 
+
     // Quizz end
     function showCongratulationPopup() {
-        congratulationPopup.style.display = "block";
+        congratulationPopup.style.display = "flex";
     }
 
     function showScoreboard() {
@@ -105,7 +119,7 @@ let score = 0;
     }
 
     // Getting the json questions
-    fetch("./question.json")
+    fetch("../scripts/question.json")
         .then(response => response.json())
         .then(data => {
             questions = data;
@@ -117,7 +131,7 @@ let score = 0;
 const startButton = document.getElementById("start-button");
 startButton.addEventListener("click", startGame);
 nextButton.addEventListener("click", checkAnswerAndShowPopup);
-popupCloseButton.addEventListener("click", closePopup);
+// popupCloseButton.addEventListener("click", closePopup);
 // Event listener for the Show Scoreboard button in the congratulation popup
 showScoreboardButton.addEventListener("click", showScoreboard);
 // Event listener for the Restart button

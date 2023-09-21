@@ -7,24 +7,24 @@ button {
     opacity: 0.4;
     transition: 0.4s all ease-in-out;
     cursor: pointer;
+}
+button:hover {
+  opacity: 1;
+}
+
+.button {
+  text-align: center;
+}
+
+.btn2 {
+  background: none;
+  border: 2px solid;
+  border-image: linear-gradient(to right, #EDDEBF, #19587D) 1;
+}
+
+/*Responsive... Button...Adjusting the size*/
+@media screen and (max-width: 850px) {
+  button {
+    padding: 2% 3%;
   }
-  button:hover {
-    opacity: 1;
-  }
-  
-  .button {
-    text-align: center;
-  }
-  
-  .btn2 {
-    background: none;
-    border: 2px solid;
-    border-image: linear-gradient(to right, #EDDEBF, #19587D) 1;
-  }
-  
-  /*Responsive... Button...Adjusting the size*/
-  @media screen and (max-width: 850px) {
-    button {
-      padding: 2% 3%;
-    }
-  }
+}

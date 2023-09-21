@@ -92,80 +92,105 @@ body {
 
 /*quiz first bg*/
 #game {
-  justify-content: center;
+  height: 100vh;
+  position: relative;
 }
 
-/* Add some basic styles for the quiz container */
-#quiz-container {
-  width: 400px;
-  margin: 0 auto;
+#start-container {
   text-align: center;
-  display: none; /* Initially hidden */
 }
-
-/* Style for the question and answer options */
-.question {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-/* Style for the Next Question button */
-#next-button {
-  display: none; /* Initially hidden */
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Style for the custom popup modal */
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+#start-container #bat-bg {
+  overflow-x: hidden;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
+#start-container #bat-bg img {
+  min-height: 75vh;
+}
 
-.popup-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+button {
+  background: linear-gradient(to right, #EDDEBF, #ff7700);
+  font-family: "Titre B1";
+}
+
+button:hover {
+  color: #000;
+  opacity: 1;
+}
+
+#quiz-container {
+  width: fit-content;
+  margin: 0 auto;
+}
+#quiz-container #question-counter {
   text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10%;
 }
-
-/* Style for the scoreboard */
-#scoreboard {
-  display: none; /* Initially hidden */
-  font-size: 18px;
-  margin-top: 20px;
-}
-
-/* Style for the restart button */
-#restart-button {
-  display: none; /* Initially hidden */
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
+#quiz-container .option {
+  width: 90%;
+  padding: 10px 0 10px 10%;
+  margin: 10px;
+  font-family: "Titre";
+  font-size: 1.2em;
+  background: #393939;
   cursor: pointer;
+  position: relative;
+}
+#quiz-container .option:hover::after {
+  background: #FF0000;
+  border: 1px solid #000;
+}
+#quiz-container .option::after {
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 10px;
+  height: 10px;
+  width: 10px;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+#quiz-container .option.selected {
+  background: #FFD700;
+  color: white;
+  border: 2px solid #393939;
+  color: #000;
+  font-family: "Titre B1";
+}
+#quiz-container #next-button {
+  margin-top: 25%;
 }
 
-/* Style for the congratulation popup */
+#popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+
 #congratulation-popup {
-  display: none; /* Initially hidden */
-  font-size: 18px;
-  margin-top: 20px;
+  position: fixed;
+  display: none;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  padding: 50px;
+  background: linear-gradient(to bottom right, rgba(237, 222, 191, 0.2), rgba(255, 119, 0, 0.2));
+  border: 1px solid #393939;
+  border-radius: 30px;
+}
+#congratulation-popup button {
+  opacity: 1;
+  color: #000;
 }
 
 /*# sourceMappingURL=game.css.map */
