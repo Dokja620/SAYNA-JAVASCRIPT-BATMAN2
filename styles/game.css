@@ -95,24 +95,77 @@ body {
   justify-content: center;
 }
 
-.start_btn {
-  display: grid;
-  align-content: center;
-}
-.start_btn button {
-  margin: 4% 20% 0;
+/* Add some basic styles for the quiz container */
+#quiz-container {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  display: none; /* Initially hidden */
 }
 
-.start-title {
-  margin: 0 15%;
+/* Style for the question and answer options */
+.question {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style for the Next Question button */
+#next-button {
+  display: none; /* Initially hidden */
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the custom popup modal */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.bg {
-  margin: 10px 20% 0;
+/* Style for the scoreboard */
+#scoreboard {
+  display: none; /* Initially hidden */
+  font-size: 18px;
+  margin-top: 20px;
 }
-.bg img {
-  width: 100%;
+
+/* Style for the restart button */
+#restart-button {
+  display: none; /* Initially hidden */
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the congratulation popup */
+#congratulation-popup {
+  display: none; /* Initially hidden */
+  font-size: 18px;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=game.css.map */

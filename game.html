@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/game.css">
     <link rel="shortcut icon" href="./images/icons/logo_bat_flèche_2.png" type="image/x-icon">
     <script defer src="./scripts/scroll.js"></script>
+    <script defer src="./scripts/quizz.js"></script>
     <meta name="description" content="PROJET FIL ROUGE 2 - application des lecons de JavaScripts">
     <meta name="author" content="Axel Diary RAKOTOARIVAO">
     <title>BATGAME</title>
@@ -36,29 +37,39 @@
             </div>
         </section>
         <section id="game" class="page">
-            <!-- Start Quiz Button -->
-            <div class="start_btn">
-                <div class="start-title hidden"><h2>CONNAISSER VOUS BIEN LE CHEVALIER NOIR ?</h2></div>
-                <div class="bg hidden"><img src="./images/Illustrations/batgame/Batgame_2.png" alt=""></div>
-                <button class="hidden">Commencer le Quiz</button>
+            <div id="start-container">
+                <h1>CONNAISSEZ VOUS BIEN LE CHEVALIER NOIR ?</h1>
+                <div id="bat-bg">
+                    <img src="images/Illustrations/batgame/Batgame_1.png" alt="Batgame background">
+                </div>
+                <button id="start-button" class="quizz-btn">Démarrer le quizz</button>
             </div>
-
-            <!-- Rules box -->
-            <div class="info_box">
-                <div class="info_title">
-                    <span>Quelque règle de ce quiz</span>
+        
+            <div id="quiz-container">
+                <p id="question-counter"></p>
+                <h2 class="question" id="question"></h2>
+                <div id="options-container" class="option-container">
                 </div>
-                <div class="info_list">
-                    <div class="info">1. <span>15 secondes</span> c'est le temps dont vous disposerez pour répondre à chaque question.</div>
-                    <div class="info">2. Une fois choisis, vous ne pourrez plus changer de réponse.</div>
-                    <div class="info">3. Vous ne pouvez plus choisir une fois le temps écouler.</div>
-                    <div class="info">4. Vous ne pourrez pas quittez le tant que le quiz est en cours.</div>
-                    <div class="info">5. Vous aurrez des points en fonction des bonnes réponses.</div>
+                <button id="next-button" class="quizz-btn">Question suivante</button>
+            </div>
+        
+            <div class="popup" id="popup">
+                <div class="popup-content">
+                    <p id="popup-message"></p>
+                    <button id="popup-close-button">Close</button>
                 </div>
-                <div class="buttons">
-                    <button class="quiz">Quitter</button>
-                    <button class="restart">Continuer</button>
+            </div>
+        
+            <div class="popup" id="congratulation-popup">
+                <div class="popup-content">
+                    <p>Congratulations! You have completed the quiz.</p>
+                    <button id="show-scoreboard-button">Show Scoreboard</button>
                 </div>
+            </div>
+        
+            <div id="scoreboard">
+                <p id="score">Score: 0</p>
+                <button id="restart-button">Rejouez</button>
             </div>
         </section>
     </main>
