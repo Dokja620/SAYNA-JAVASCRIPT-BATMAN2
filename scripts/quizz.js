@@ -31,7 +31,7 @@ let score = 0;
         if (currentQuestionIndex < questions.length) {
             const currentQuestion = questions[currentQuestionIndex];
             questionElement.textContent = currentQuestion.question;
-            questionCounter.textContent = `${currentQuestionIndex + 1}/15`;
+            questionCounter.textContent = `${currentQuestionIndex + 1}/12`;
             optionsContainer.innerHTML = "";
             currentQuestion.response.forEach((option, index) => {
                 const optionElement = document.createElement("div");
@@ -119,7 +119,7 @@ let score = 0;
     }
 
     // Getting the json questions
-    fetch("../scripts/question.json")
+    fetch("scripts/question.json")
         .then(response => response.json())
         .then(data => {
             questions = data;

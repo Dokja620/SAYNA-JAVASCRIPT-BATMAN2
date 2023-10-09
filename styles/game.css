@@ -193,4 +193,15 @@ button:hover {
   color: #000;
 }
 
+#scoreboard {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#scoreboard .restart-button {
+  padding: 1em;
+}
+
 /*# sourceMappingURL=game.css.map */
