@@ -21,3 +21,6 @@ Salut!! 😁 Upload de mon projet
     Dernière chose... Les commentaires sont juste là pour indiquer quel partie
     est sur ces lignes... J'ai pas eu le temps d'expliquer lignes par ligne tout
     ce que j'ai fais.
+
+# PREVIEW
+https://github.com/Dokja620/SAYNA-JAVASCRIPT-BATMAN2/assets/126552855/8432b50c-f5ee-4bcb-865c-9dec712d7cb1
