@@ -4,28 +4,35 @@
 @import url(../styles/libs/cadre.css);
 @import url(../styles/libs/button.css);
 @import url(../styles/libs/footer-animation.css);
+
 /*font importation, je mets tout ici, c'est plus simple et efficace ainsi*/
 @font-face {
   font-family: "Titre";
   src: url("../fonts/Rajdhani-Medium.ttf");
 }
+
 @font-face {
   font-family: "Titre B1";
   src: url("../fonts/Rajdhani-SemiBold.ttf");
 }
+
 @font-face {
   font-family: "Titre B2";
   src: url("../fonts/Rajdhani-Bold.ttf");
 }
+
 @font-face {
   font-family: "Titre H2";
   src: url("../fonts/SpaceGrotesk-Bold.ttf");
 }
+
 @font-face {
   font-family: "Texte";
   src: url("../fonts/SpaceGrotesk-Regular.ttf");
 }
-h1, ul li {
+
+h1,
+ul li {
   font-family: "Titre";
   font-size: 2.25em;
 }
@@ -40,12 +47,14 @@ h2 {
   font-size: 1.5em;
 }
 
-h6, h3 {
+h6,
+h3 {
   font-family: "Titre H2";
   font-size: 0.9em;
 }
 
-p, label {
+p,
+label {
   font-family: "Texte";
   font-size: 1.125em;
 }
@@ -56,7 +65,7 @@ label {
 
 /*background first*/
 body {
-  background: black url(../images/Illustrations/batgame/Batgame_1.png) 70% 20%/cover no-repeat;
+  background: black url(../images/Illustrations/batgame/Batgame_1.webp) 70% 20%/cover no-repeat;
   height: 901px;
   font-size: 16px;
 }
@@ -67,11 +76,13 @@ body {
     font-size: 14px;
   }
 }
+
 @media screen and (min-width: 950px) and (max-width: 990px) {
   .synopsis {
     font-size: 0.9em;
   }
 }
+
 /**/
 .page {
   height: 100vh;
@@ -82,6 +93,7 @@ body {
   margin: 300PX 10% 0;
   width: 300px;
 }
+
 #play h1 {
   font-family: "Titre B2";
   font-weight: 700;
@@ -99,6 +111,7 @@ body {
 #start-container {
   text-align: center;
 }
+
 #start-container #bat-bg {
   overflow-x: hidden;
   width: 85%;
@@ -107,6 +120,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 #start-container #bat-bg img {
   min-height: 75vh;
 }
@@ -122,14 +136,18 @@ button:hover {
 }
 
 #quiz-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
+
 #quiz-container #question-counter {
   text-align: center;
   font-size: 1.5em;
   margin-bottom: 10%;
 }
+
 #quiz-container .option {
   width: 90%;
   padding: 10px 0 10px 10%;
@@ -140,10 +158,12 @@ button:hover {
   cursor: pointer;
   position: relative;
 }
+
 #quiz-container .option:hover::after {
   background: #FF0000;
   border: 1px solid #000;
 }
+
 #quiz-container .option::after {
   content: "";
   position: absolute;
@@ -155,6 +175,7 @@ button:hover {
   background: #fff;
   transition: all 0.5s ease-in-out;
 }
+
 #quiz-container .option.selected {
   background: #FFD700;
   color: white;
@@ -162,6 +183,7 @@ button:hover {
   color: #000;
   font-family: "Titre B1";
 }
+
 #quiz-container #next-button {
   margin-top: 25%;
 }
@@ -182,12 +204,15 @@ button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   padding: 50px;
   background: linear-gradient(to bottom right, rgba(237, 222, 191, 0.2), rgba(255, 119, 0, 0.2));
   border: 1px solid #393939;
   border-radius: 30px;
 }
+
 #congratulation-popup button {
   opacity: 1;
   color: #000;
@@ -200,8 +225,7 @@ button:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 #scoreboard .restart-button {
   padding: 1em;
 }
-
-/*# sourceMappingURL=game.css.map */

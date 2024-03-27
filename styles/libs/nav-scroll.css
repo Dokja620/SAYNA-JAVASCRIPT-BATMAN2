@@ -1,60 +1,73 @@
 /*barre de navigation... Home logo and other page links*/
 nav {
-    position: relative;
-    padding-top: 20px;
-  }
-  nav .nav-logo {
-    position: absolute;
-    left: 8%;
-  }
-  nav .nav-logo img {
-    cursor: pointer;
-    transition: filter 0.4s ease-in-out;
-  }
-  nav .nav-logo img:hover {
-    filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
-  }
-  nav .nav-links {
-    position: absolute;
-    right: 6%;
-  }
-  nav .nav-links ul li {
-    display: inline-block;
-    padding: 0 15px;
-  }
-  nav .nav-links ul li a {
-    margin: auto;
-    position: relative;
-  }
-  nav .nav-links ul li a::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: yellow;
-    transform-origin: bottom center;
-    transition: all 0.5s ease-in-out;
-  }
-  nav .nav-links ul li a:hover {
-    filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
-    font-weight: 600;
-  }
-  nav .nav-links ul li a:hover::after {
-    transform: scaleX(1);
-  }
-  
-  /*just a little adjustement for small screen devices*/
-  @media screen and (max-width: 500px) {
-    .nav-logo img {
-      padding-top: 9px;
-      width: 75%;
-    }
-  }
+  position: relative;
+  padding-top: 20px;
+}
 
-  /*The scroll bar*/
+nav .nav-logo {
+  position: absolute;
+  left: 8%;
+}
+
+nav .nav-logo img {
+  cursor: pointer;
+  transition: -webkit-filter 0.4s ease-in-out;
+  transition: filter 0.4s ease-in-out;
+  transition: filter 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
+}
+
+nav .nav-logo img:hover {
+  -webkit-filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+          filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+}
+
+nav .nav-links {
+  position: absolute;
+  right: 6%;
+}
+
+nav .nav-links ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+nav .nav-links ul li a {
+  margin: auto;
+  position: relative;
+}
+
+nav .nav-links ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: yellow;
+  transform-origin: bottom center;
+  transition: all 0.5s ease-in-out;
+}
+
+nav .nav-links ul li a:hover {
+  -webkit-filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+          filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+  font-weight: 600;
+}
+
+nav .nav-links ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+/*just a little adjustement for small screen devices*/
+@media screen and (max-width: 500px) {
+  .nav-logo img {
+    padding-top: 9px;
+    width: 75%;
+  }
+}
+
+/*The scroll bar*/
 .scroll {
   position: fixed;
   z-index: 1;
@@ -63,15 +76,21 @@ nav {
   align-items: center;
   transition: 0.5s all ease-in-out;
 }
+
 .scroll .mediasoc div {
   padding: 5px 0;
 }
+
 .scroll img {
   cursor: pointer;
+  transition: -webkit-filter 0.4s ease-in-out;
   transition: filter 0.4s ease-in-out;
+  transition: filter 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
 }
+
 .scroll img:hover {
-  filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+  -webkit-filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
+          filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
 }
 
 /*responsive part for the scroll*/
@@ -80,22 +99,27 @@ nav {
   .scroll {
     right: 1.1%;
   }
+
   .scroll .up a img {
     width: 70px;
   }
 }
+
 /*and then I rotated the arrow like bat stuff... 'cause there no much space*/
 @media screen and (max-width: 850px) {
   .scroll {
     right: -2%;
   }
+
   .scroll .up {
     transform: rotate(-90deg);
     margin: 25% 0;
   }
+
   .scroll .up a img {
     width: 80px;
   }
+
   .scroll .down {
     transform: rotate(90deg);
   }

@@ -10,74 +10,90 @@
     font-family: 'Titre';
     src: url('../fonts/Rajdhani-Medium.ttf');
 }
+
 @font-face {
     font-family: 'Titre B1';
     src: url('../fonts/Rajdhani-SemiBold.ttf');
 }
+
 @font-face {
     font-family: 'Titre B2';
     src: url('../fonts/Rajdhani-Bold.ttf');
 }
+
 @font-face {
     font-family: 'Titre H2';
     src: url('../fonts/SpaceGrotesk-Bold.ttf');
 }
+
 @font-face {
     font-family: 'Texte';
     src: url('../fonts/SpaceGrotesk-Regular.ttf');
 }
-h1, ul li{
+
+h1,
+ul li {
     font-family: 'Titre';
     font-size: 2.25em;
 }
-button{
+
+button {
     font-family: 'Titre';
     font-size: 1.25em;
 }
-h2{
+
+h2 {
     font-family: 'Titre';
     font-size: 1.5em;
 }
-h6,h3{
+
+h6,
+h3 {
     font-family: 'Titre H2';
     font-size: .9em;
 }
-p, label{
-    font-family: 'Texte'; 
+
+p,
+label {
+    font-family: 'Texte';
     font-size: 1.125em;
 }
-label{
+
+label {
     color: grey;
 }
 
 /*background first*/
-body{
-    background: black url(../images/Illustrations/batgame/Batgame_1.png) 70% 20%/cover no-repeat;
+body {
+    background: black url(../images/Illustrations/batgame/Batgame_1.webp) 70% 20%/cover no-repeat;
     height: 901px;
     font-size: 16px;
 }
-    /*Responsive*/
-    @media screen and (max-width: 900px) {
-        body{
-            font-size: 14px;
-        }
+
+/*Responsive*/
+@media screen and (max-width: 900px) {
+    body {
+        font-size: 14px;
     }
-    @media screen and (min-width: 950px) and (max-width: 990px) {
-        .synopsis{
-            font-size: .9em;
-        }
+}
+
+@media screen and (min-width: 950px) and (max-width: 990px) {
+    .synopsis {
+        font-size: .9em;
     }
+}
 
 /**/
-.page{
+.page {
     height: 100vh;
 }
 
 /*première section*/
-#play{
+#play {
     margin: 300PX 10% 0;
     width: 300px;
-    h1{
+
+    h1 {
         font-family: 'Titre B2';
         font-weight: 700;
         font-size: 2.7em;
@@ -87,42 +103,50 @@ body{
 }
 
 /*quiz first bg*/
-#game{
+#game {
     height: 100vh;
     position: relative;
 }
 
-#start-container{
+#start-container {
     text-align: center;
-    #bat-bg{
+
+    #bat-bg {
         overflow-x: hidden;
         width: 85%;
         margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
+
+        img {
             min-height: 75vh;
         }
     }
 }
-button{
+
+button {
     background: linear-gradient(to right, #EDDEBF, #ff7700);
     font-family: 'Titre B1';
 }
+
 button:hover {
     color: #000;
     opacity: 1;
 }
 
-#quiz-container{
+#quiz-container {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto;
-    #question-counter{
+
+    #question-counter {
         text-align: center;
         font-size: 1.5em;
         margin-bottom: 10%;
     }
+
     .option {
         width: 90%;
         padding: 10px 0 10px 10%;
@@ -132,11 +156,13 @@ button:hover {
         background: #393939;
         cursor: pointer;
         position: relative;
-        &:hover::after{
+
+        &:hover::after {
             background: #FF0000;
             border: 1px solid #000;
         }
-        &::after{
+
+        &::after {
             content: '';
             position: absolute;
             transform: translateY(-50%);
@@ -147,6 +173,7 @@ button:hover {
             background: #fff;
             transition: all .5s ease-in-out;
         }
+
         &.selected {
             background: #FFD700;
             color: white;
@@ -155,19 +182,20 @@ button:hover {
             font-family: 'Titre B1';
         }
     }
-    #next-button{
+
+    #next-button {
         margin-top: 25%;
     }
 }
 
-#popup{
+#popup {
     display: none;
     position: absolute;
     top: 0;
     left: 10%;
 }
 
-#congratulation-popup{
+#congratulation-popup {
     position: fixed;
     display: none;
     text-align: center;
@@ -176,24 +204,28 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     padding: 50px;
     background: linear-gradient(to bottom right, #eddebf33, #ff770033);
     border: 1px solid #393939;
     border-radius: 30px;
-    button{
+
+    button {
         opacity: 1;
         color: #000;
     }
 }
 
-#scoreboard{
+#scoreboard {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    .restart-button{
+
+    .restart-button {
         padding: 1em;
     }
 }

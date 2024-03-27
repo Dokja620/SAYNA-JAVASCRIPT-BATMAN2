@@ -4,35 +4,43 @@
 @import url(../styles/libs/cadre.css);
 @import url(../styles/libs/button.css);
 @import url(../styles/libs/footer-animation.css);
+
 /*font importation, je mets tout ici, c'est plus simple et efficace ainsi*/
 @font-face {
   font-family: "Titre";
   src: url("../fonts/Rajdhani-Medium.ttf");
 }
+
 @font-face {
   font-family: "Titre H2";
   src: url("../fonts/SpaceGrotesk-Bold.ttf");
 }
+
 @font-face {
   font-family: "Texte";
   src: url("../fonts/SpaceGrotesk-Regular.ttf");
 }
-h1, ul li {
+
+h1,
+ul li {
   font-family: "Titre";
   font-size: 2.25em;
 }
 
-button, h2 {
+button,
+h2 {
   font-family: "Titre";
   font-size: 1.25em;
 }
 
-h6, h3 {
+h6,
+h3 {
   font-family: "Titre H2";
   font-size: 0.9em;
 }
 
-p, label {
+p,
+label {
   font-family: "Texte";
   font-size: 1.125em;
 }
@@ -43,7 +51,7 @@ label {
 
 /*Background... First thing that the user will see...*/
 body {
-  background: black url("../images/Illustrations/Bathome1.png") 80% 20%/cover no-repeat;
+  background: black url("../images/Illustrations/Bathome1.webp") 80% 20%/cover no-repeat;
   height: 901px;
   font-size: 16px;
 }
@@ -54,11 +62,13 @@ body {
     font-size: 14px;
   }
 }
+
 @media screen and (min-width: 950px) and (max-width: 990px) {
   .synopsis {
     font-size: 0.9em;
   }
 }
+
 /*forgot what the purpose of this... It's important so let's just let it be*/
 main {
   z-index: 2;
@@ -69,12 +79,17 @@ main {
   text-align: center;
   margin-bottom: 15%;
 }
+
 .flèche img {
   width: 50px;
   cursor: pointer;
+  transition: -webkit-filter 0.4s ease-in-out;
   transition: filter 0.4s ease-in-out;
+  transition: filter 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
 }
+
 .flèche img:hover {
+  -webkit-filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
   filter: grayscale(50%) brightness(70%) sepia(100%) hue-rotate(5deg) saturate(500%) contrast(1);
 }
 
@@ -82,6 +97,7 @@ main {
 #intro {
   height: 901px;
 }
+
 #intro .parent {
   margin-right: auto;
   margin-left: auto;
@@ -96,6 +112,7 @@ main {
     margin-left: 12%;
   }
 }
+
 /*Three section share those propreties... They look alike so I gave 'em the same classes*/
 .titles-stuff {
   margin: 0 12%;
@@ -109,14 +126,17 @@ main {
   display: flex;
   text-align: center;
 }
+
 .thebats h6 {
   padding-top: 10px;
 }
+
 .thebats img {
   width: 90%;
   transition: 0.5s transform ease-in-out;
   cursor: pointer;
 }
+
 .thebats img:hover {
   transform: scale(1.1);
 }
@@ -126,19 +146,23 @@ main {
   .titles-stuff {
     margin: 0 16% 0 12%;
   }
+
   .thebats {
     margin: 35px 16% 35px 12%;
   }
 }
+
 /*Hors section 1 the batman who just do? I don't even know what he's doing there*/
 .vigilent {
   position: relative;
   height: 30vh;
 }
+
 .vigilent .random {
   position: absolute;
   right: 0;
 }
+
 .vigilent .random img {
   height: 40vh;
 }
@@ -147,11 +171,13 @@ main {
 .bata {
   position: relative;
 }
+
 .bata .batarang {
   position: absolute;
   top: -60px;
   left: 65px;
 }
+
 .bata .batarang img {
   width: 100px;
 }
@@ -162,13 +188,16 @@ main {
     height: 30vh;
   }
 }
+
 /*Justice league part*/
 #justiceleague .jlt {
   margin: 0 15% 10% 15%;
 }
+
 #justiceleague .jl {
   margin: 0;
 }
+
 #justiceleague .jl img {
   width: 100%;
 }
@@ -180,15 +209,18 @@ main {
   margin: 10% auto;
   width: 80%;
 }
+
 .media .synopsis {
   height: 230px;
   display: flex;
   background: linear-gradient(to bottom right, #4e4940, #091e2a);
   border-radius: 0 20px 20px 0;
 }
+
 .media .synopsis .texts {
   padding: 10px 15px;
 }
+
 .media .arrow {
   margin: 0 30px;
 }
@@ -198,49 +230,63 @@ main {
   .media {
     width: 100%;
   }
+
   .media .synopsis {
+    height: -webkit-max-content;
+    height: -moz-max-content;
     height: max-content;
   }
 }
+
 @media screen and (max-width: 800px) {
   .media {
     width: 90%;
   }
+
   .media .synopsis {
     border-radius: 0 20px 20px 20px;
     height: 100%;
   }
+
   .media .synopsis img {
     display: none;
   }
 }
+
 @media screen and (max-width: 550px) {
   .media {
     width: 75%;
   }
+
   .media .synopsis {
     margin-top: 200px;
     height: 100%;
     position: relative;
   }
+
   .media .synopsis img {
     display: block;
     position: absolute;
     top: -240px;
   }
+
   .media .arrow {
     display: none;
   }
 }
+
 /*Hors section, partie vidéo... */
 .video {
   text-align: center;
 }
+
 .video img {
   width: 80%;
   transition: all 0.25s ease-in-out;
 }
+
 .video img:hover {
+  -webkit-filter: drop-shadow(0 0 10px white);
   filter: drop-shadow(0 0 10px white);
 }
 
@@ -251,7 +297,9 @@ form {
   margin: 15% 0;
   line-height: 30px;
 }
-form input, form select {
+
+form input,
+form select {
   font-family: "Texte";
   background: none;
   border-top: none;
@@ -259,14 +307,20 @@ form input, form select {
   border-right: none;
   width: 100%;
 }
-form input:focus, form select:focus {
+
+form input:focus,
+form select:focus {
   outline: none;
 }
-form select > option {
+
+form select>option {
   background-color: rgba(9, 30, 42, 0.2078431373);
 }
 
-.one, .two, .three, .four {
+.one,
+.two,
+.three,
+.four {
   margin: 15px 0;
 }
 
@@ -274,23 +328,29 @@ form select > option {
 #quotes {
   margin: 25% 10%;
 }
+
 #quotes img {
   width: 10vh;
 }
+
 #quotes .leftg {
   text-align: left;
 }
+
 #quotes .quotes {
   text-align: center;
   margin: 5% 0;
 }
+
 #quotes .rightd {
   text-align: right;
 }
+
 #quotes .point {
   display: flex;
   justify-content: center;
 }
+
 #quotes .point .dot {
   margin: 5px 2px;
   width: 10px;
@@ -300,5 +360,3 @@ form select > option {
 }
 
 /*END!*/
-
-/*# sourceMappingURL=style.css.map */

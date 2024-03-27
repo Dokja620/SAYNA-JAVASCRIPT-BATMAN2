@@ -1,13 +1,14 @@
 /*All buttons have their propreties here... Easier and fastest way to make it*/
 button {
-    background: linear-gradient(to right, #EDDEBF, #890008);
-    border: none;
-    padding: 1% 2%;
-    margin: 10px 2%;
-    opacity: 0.4;
-    transition: 0.4s all ease-in-out;
-    cursor: pointer;
+  background: linear-gradient(to right, #EDDEBF, #890008);
+  border: none;
+  padding: 1% 2%;
+  margin: 10px 2%;
+  opacity: 0.4;
+  transition: 0.4s all ease-in-out;
+  cursor: pointer;
 }
+
 button:hover {
   opacity: 1;
 }
@@ -19,7 +20,8 @@ button:hover {
 .btn2 {
   background: none;
   border: 2px solid;
-  border-image: linear-gradient(to right, #EDDEBF, #19587D) 1;
+  -o-border-image: linear-gradient(to right, #EDDEBF, #19587D) 1;
+     border-image: linear-gradient(to right, #EDDEBF, #19587D) 1;
 }
 
 /*Responsive... Button...Adjusting the size*/
